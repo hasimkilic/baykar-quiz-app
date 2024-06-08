@@ -16,7 +16,7 @@ body {
   border: 1px solid #ddd;
   width: 90%;
   border-radius: 4px;
-  padding: 0 6px;
+  padding: 8px 6px;
 }
 .answers li:hover {
   background-color: #142142;
