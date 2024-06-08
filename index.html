@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css" rel="stylesheet" />
+    <title>Baykar Quiz App</title>
+  </head>
+  <body>
+    <div
+      class="quiz-container mx-auto flex justify-center items-center h-screen"
+    >
+      <div class="results hidden">
+        <h2 class="py-6 text-5xl text-center">Sonuçlar</h2>
+        <table
+          id="resultsTable"
+          border="1"
+          class="min-w-full divide-y divide-gray-300 border-2 border-[#142142]"
+        >
+          <tr class="divide-x divide-gray-200 flex items-center gap-3">
+            <th
+              class="py-4 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pl-0"
+            >
+              Soru
+            </th>
+            <th class="px-4 py-4 text-left text-sm font-semibold text-gray-900">
+              Cevabınız
+            </th>
+          </tr>
+        </table>
+      </div>
+      <div class="bg-[#142142] shadow rounded-md sm:rounded-lg text-white">
+        <div class="px-4 py-5 sm:p-6">
+          <div class="sm:flex sm:items-start sm:justify-between">
+            <div id="quiz">
+              <div class="question-count mb-2.5 text-3xl text-center"></div>
+              <div class="timer mb-2.5 text-2xl text-center">
+                Kalan Süre: 30 saniye
+              </div>
+              <div class="question py-5 text-2xl leading-6"></div>
+              <ul
+                class="answers mb-4 flex flex-col items-center justify-center gap-5 px-0 py-5 list-none rounded-md bg-white text-gray-900 text-xl leading-5"
+              ></ul>
+              <div class="rounded-md bg-red-50 p-4">
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <svg
+                      class="h-5 w-5 text-red-400"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ml-3">
+                    <h3 class="text-sm font-medium text-red-800">
+                      Lütfen burayı okuyunuz !
+                    </h3>
+                    <div class="mt-2 text-sm text-red-700">
+                      <ul role="list" class="list-disc space-y-1 pl-5">
+                        <li>
+                          Soruların şıklarına ilk 10 saniye boyunca
+                          tıklanamayacaktır.
+                        </li>
+                        <li>Sorulara geri dönüş hakkı yoktur.</li>
+                        <li>
+                          Sorular cevaplanmadığı takdirde süre bitince otomatik
+                          geçecektir.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="quiz.js"></script>
+  </body>
+</html>

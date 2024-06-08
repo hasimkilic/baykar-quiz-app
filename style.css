@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.quiz-container {
+  min-width: 45rem;
+  width: 50rem;
+  margin: auto;
+  text-align: left;
+}
+.question-count,
+.timer {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.answers li {
+  border: 1px solid #ddd;
+  width: 90%;
+  border-radius: 4px;
+  padding: 0 6px;
+}
+.answers li:hover {
+  background-color: #142142;
+  color: white;
+}
+.answers button {
+  width: 100%;
+  padding: 10px;
+  cursor: not-allowed;
+}
+.answers button.active {
+  cursor: pointer;
+}
